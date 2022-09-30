@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>Acessibilidade na Web</title>
+</head>
+<body>
+    <header>
+        <h1 id="inicio">Acessibilidade na Web</h1>
+      </header>
+      <nav>
+        <ul>
+            <li><a href="#acessibilidade">Para quem é a acessibilidade?</a></li>
+            <li><a href="#link">Links</a></li>
+            <li><a href="#text">Texto</a></li>
+            <li><a href="#img">Imagens</a></li>
+            <li><a href="#table">Tabelas</a></li>
+          </ul>
+      </nav>
+      <main>
+        <article>
+          <h2 id="acessibilidade">Para quem é a acessibilidade?</h2>
+      
+          <p>A acessibilidade na web é voltada para pessoas com algum tipo de deficiência, seja visual, auditiva, motora ou cognitiva. Por exemplo, pessoas cegas ou com baixa visão, daltônicos, pessoas surdas ou com perda auditiva, pessoas com dislexia, autismo, síndrome de Down ou Parkinson, entre outras condições.</p>
+        </article>
+      
+        <article>
+            <h2 id="link">Links</h2>
+            <p>Os links do tipo LEIA MAIS não são suficientemente descritivos fora do contexto. Exemplo:</p>
+
+            <p>O Wikipedia é um site muito bom para pesquisas. acesse o site.<a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" target= "_blank"> clique aqui.</a></p>
+
+            <p>Textos de links devem ser descritivos, Exemplo correto, com o link em toda a frase, sem o “Leia mais”:</p>
+
+            <p> O Wikipedia é um site muito bom para pesquisas. acesse o site <a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" target= "_blank">WIKIPEDIA</a>.</p>
+        </article>
+
+        <article>
+            <h2 id="text">Texto</h2>
+            <p>Organização é essencial. Uma das melhores formas de ajudar um leitor de tela a interpretar sua página é criar uma boa e consistente estrutura de títulos, parágrafos, listas, etc.</p>
+                <h1>Exemplo 1</h1>
+                <h2>Exemplo 2</h2>
+                <h3>Exemplo 3</h3>
+                <h4>Exemplo 4</h4>
+                <h5>Exemplo 5</h5>
+                <h6>Exemplo 6</h6>
+        </article>
+
+        <article>
+            <h2 id="img">Imagens</h2>
+            <p>A tag img possui um atributo chamado alt que permite especificar um texto alternativo que descreve a imagem. Este texto é lido por softwares leitores de tela e também é reconhecido por mecanismos de busca. A falta do atributo alt em imagens é uma das falhas mais comuns em acessibilidade web.</p>
+
+            <figure>
+                <img src="centro-sp.jpg" alt="centro histórico da cidade de São Paulo">
+               <figcaption>Figura 1. Na imagem tem-se uma paisagem do centro histórico da cidade de São Paulo. </figcaption>
+            </figure>
+        </article>
+
+        <article>
+          <h2 id="table">Tabelas</h2>
+          <p>As tabelas são normalmente considerados o "bicho de sete cabeças" quando se fala em acessibilidade web. Vamos ver um exemplo de tabela acessivel. Exemplo:</p>
+
+          <table class="bordered striped centered">
+            <caption>Tabela 1: informações sobre pagamentos de clientes</caption>
+            <tr>
+              <th scope="row">Mês</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Andamento</th>
+            </tr>
+            <tr>
+              <td>Janeiro</td>
+              <td>567</td>
+              <td>Terminado</td>
+            </tr>
+            <tr>
+              <td>Fevereiro</td>
+              <td>346</td>
+              <td>Em andamento</td>
+            </tr>
+            <tr>
+                <td>Março</td>
+                <td>789</td>
+                <td>Terminado</td>
+              </tr>
+          </table>
+          <br>
+          <p>Para tornar essa tabela acessivel usamos: o elemento <span>caption</span> com uma pequena descrição da tabela, Para que a informação faça sentido para os utilizadores que não conseguem visualizar a tabela definimos o âmbito de cada cabeçalho através do atributo <span>scope</span>. Assim, podemos indicar que cada cabeçalho é <span>o título da coluna (scope="col") ou da linha (scope="row")</span> em que estiver inserido.</p>
+        </article>
+        <br>
+      </main>
+</body>
+</html>
